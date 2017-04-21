@@ -1,0 +1,29 @@
+<form {{ action "addQuery" on="submit" }}>
+  Enter {{ input value=queryParam}}
+  <input type="submit" value="Send" />
+
+
+  {{ui-slider
+    value=50
+    min=10
+    max=100
+    step=1
+    orientation='horizontal'
+    tooltip='show'
+    disabled=false
+    reversed=false
+    focus=false
+    naturalArrowKeys=false
+    immediateResponse=false }}
+</form>
+
+<br>
+<h2> List of Players </h2>
+<ul>
+  {{#each model as |player| }}
+  <li>{{player}}</li>
+{{/each}}
+</ul>
+{{route-query 80}}
+
+
